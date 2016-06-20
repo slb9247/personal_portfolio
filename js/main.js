@@ -1,8 +1,15 @@
 $(document).on('ready', function() {
 
-  // $(window).on('resize', function (){
-  //   $('#splashTop').height($('#img-splashTop').height());
-  // });
+
+
+  $('#link-about, #link-design, #link-dev').on('click', function() {
+    $('#splashTop').addClass('animate_elem animate_elem_slideup');
+
+    setTimeout(function() {
+      $('#splashTop').removeClass('animate_elem animate_elem_slideup');
+    }, 5000);
+  });
+
 
 
 
