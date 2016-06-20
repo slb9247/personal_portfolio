@@ -1,0 +1,50 @@
+/* ---------- GENERAL ---------- */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    height: 50vh;
+    overflow: hidden; }
+  100% {
+    opacity: 0;
+    height: 0;
+    overflow: hidden; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* ---------- ANIMATIONS ---------- */
+.animate .animate_elem {
+  animation-duration: 5s;
+  transition-timing-function: ease-in; }
+.animate .animate_elem_slideup {
+  animation-name: slideUp; }
+.animate .animate_elem_slidedown {
+  animation-name: slideDown; }
+.animate .animate_elem_fadein {
+  animation-name: fadeIn; }
+
+/* ---------- NAV ---------- */
+nav {
+  text-align: center; }
+  nav li {
+    display: inline-block;
+    padding: 10px; }
+  nav a {
+    text-decoration: none; }
+
+/* ---------- HOME IMAGES ---------- */
+#splashTop {
+  background-image: url("../images/design.jpg");
+  background-size: cover; }
+
+#splashBottom {
+  background-image: url("../images/code.jpg");
+  background-size: cover; }
+
+/*# sourceMappingURL=main.css.map */

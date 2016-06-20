@@ -1,0 +1,99 @@
+/* ---------- GENERAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+
+// @keyframes slideDown {
+//   0% {
+//     opacity: 1;
+//     height: 50vh;
+//     overflow: hidden;
+//   }
+//
+//   100% {
+//     opacity: 0;
+//     height: 0;
+//     overflow: hidden;
+//   }
+// }
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+.animate {
+
+  //basic styles for animated element
+  .animate_elem {
+    animation-duration: 5s;
+    transition-timing-function: ease-in;
+  }
+
+  //an element that slides up and out
+  .animate_elem_slideup {
+    animation-name: slideUp;
+  }
+
+  //an element that slides down and out
+  .animate_elem_slidedown {
+    animation-name: slideDown;
+  }
+
+  //an element that fades in
+  .animate_elem_fadein {
+    animation-name: fadeIn;
+  }
+}
+
+
+/* ---------- NAV ---------- */
+nav {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/* ---------- HOME IMAGES ---------- */
+#splashTop {
+  background-image: url('../images/design.jpg');
+  background-size: cover;
+}
+
+#splashBottom {
+  background-image: url('../images/code.jpg');
+  background-size: cover;
+}
