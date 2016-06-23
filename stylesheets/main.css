@@ -7,27 +7,17 @@
 @keyframes slideUp {
   0% {
     opacity: 1;
-    height: 50vh;
+    height: 90vh;
     overflow: hidden; }
   100% {
     opacity: 0;
     height: 0;
     overflow: hidden; } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 /* ---------- ANIMATIONS ---------- */
-.animate .animate_elem {
+.animate_elem_slideup {
+  animation-name: slideUp;
   animation-duration: 5s;
   transition-timing-function: ease-in; }
-.animate .animate_elem_slideup {
-  animation-name: slideUp; }
-.animate .animate_elem_slidedown {
-  animation-name: slideDown; }
-.animate .animate_elem_fadein {
-  animation-name: fadeIn; }
 
 /* ---------- NAV ---------- */
 nav {
@@ -38,15 +28,32 @@ nav {
   nav a {
     text-decoration: none; }
 
-/* ---------- HOME IMAGES ---------- */
-#splashTop {
+/* ---------- HOME ---------- */
+#splash {
   background-image: url("../images/design.jpg");
   background-size: cover;
-  height: 50vh; }
+  height: 90vh; }
 
-#splashBottom {
-  background-image: url("../images/code.jpg");
-  background-size: cover;
-  height: 50vh; }
+/* ---------- PAGES GENERAL ---------- */
+#page-about,
+#page-design,
+#page-dev {
+  display: none; }
+
+/* ---------- DESIGN PAGE ---------- */
+#samp1,
+#samp2,
+#samp3 {
+  width: 100%; }
+  #samp1 img,
+  #samp2 img,
+  #samp3 img {
+    width: 100%; }
+  @media (min-width: 560px) {
+    #samp1,
+    #samp2,
+    #samp3 {
+      width: 50%;
+      float: left; } }
 
 /*# sourceMappingURL=main.css.map */
