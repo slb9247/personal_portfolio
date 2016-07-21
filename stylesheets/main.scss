@@ -1,6 +1,6 @@
 /* ---------- GENERAL ---------- */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -45,19 +45,33 @@ nav {
 
 
 /* ---------- HOME ---------- */
-#splash {
-  background-image: url('../images/design.jpg');
-  background-size: cover;
-//  background-position: center;
-  height: 90vh;
-}
+// #splash {
+//   background-image: url('../images/design.jpg');
+//   background-size: cover;
+// //  background-position: center;
+//   height: 90vh;
+// }
 
 /* ---------- PAGES GENERAL ---------- */
-//#page-home,
-#page-about,
-#page-design,
+#page-home {
+  opacity: 1;
+  background-color: purple;
+  width: 80%;
+}
+
+#page-about {
+  opacity: 0;
+  background-color: yellow;
+}
+
+#page-design {
+  opacity: 0;
+  background-color: red;
+}
+
 #page-dev {
-  display: none;
+  opacity: 0;
+  background-color: blue;
 }
 
 /* ---------- DESIGN PAGE ---------- */

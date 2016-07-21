@@ -1,6 +1,6 @@
 /* ---------- GENERAL ---------- */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0; }
 
 /* ---------- KEYFRAMES ---------- */
@@ -29,16 +29,23 @@ nav {
     text-decoration: none; }
 
 /* ---------- HOME ---------- */
-#splash {
-  background-image: url("../images/design.jpg");
-  background-size: cover;
-  height: 90vh; }
-
 /* ---------- PAGES GENERAL ---------- */
-#page-about,
-#page-design,
+#page-home {
+  opacity: 1;
+  background-color: purple;
+  width: 80%; }
+
+#page-about {
+  opacity: 0;
+  background-color: yellow; }
+
+#page-design {
+  opacity: 0;
+  background-color: red; }
+
 #page-dev {
-  display: none; }
+  opacity: 0;
+  background-color: blue; }
 
 /* ---------- DESIGN PAGE ---------- */
 #samp1,
