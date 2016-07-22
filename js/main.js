@@ -23,27 +23,34 @@ $(document).on('ready', function() {
           // if the current page is about
           if ($('#page-about').hasClass('current')) {
             $('#page-about').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-home').animate({'opacity': '1'}, 500);
+              // moves back to original location while hidden
+              $('#page-about').css('left', '0px');
             })
           }
 
           // if the current page is design
           else if ($('#page-design').hasClass('current')) {
             $('#page-design').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-home').animate({'opacity': '1'}, 500);
+              $('#page-design').css('left', '0px');
             });
           }
 
           // if the current page is development
           else if ($('#page-dev').hasClass('current')) {
             $('#page-dev').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-home').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('left', '0px');
             });
           }
 
@@ -64,27 +71,33 @@ $(document).on('ready', function() {
           // if the current page is home
           if ($('#page-home').hasClass('current')) {
             $('#page-home').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-home').css('left', '0px');
             });
           }
 
           // if the current page is design
           else if ($('#page-design').hasClass('current')) {
             $('#page-design').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-design').css('left', '0px');
             });
           }
 
           // if the current page is development
           else if ($('#page-dev').hasClass('current')) {
             $('#page-dev').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('left', '0px');
             });
           }
 
@@ -107,27 +120,33 @@ $(document).on('ready', function() {
           // if the current page is home
           if ($('#page-home').hasClass('current')) {
             $('#page-home').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-home').css('left', '0px');
             });
           }
 
           // if the current page is about
           else if ($('#page-about').hasClass('current')) {
             $('#page-about').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-about').css('left', '0px');
             })
           }
 
           // if the current page is development
           else if ($('#page-dev').hasClass('current')) {
             $('#page-dev').animate({
-              'opacity': '0'
+              left: '100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('left', '0px');
             });
           }
 
@@ -150,27 +169,33 @@ $(document).on('ready', function() {
           // if the current page is home
           if ($('#page-home').hasClass('current')) {
             $('#page-home').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-home').css('left', '0px');
             });
           }
 
           // if the current page is about
           if ($('#page-about').hasClass('current')) {
             $('#page-about').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-about').css('left', '0px');
             })
           }
 
           // if the current page is design
           else if ($('#page-design').hasClass('current')) {
             $('#page-design').animate({
-              'opacity': '0'
+              left: '-100px',
+              opacity: 0
             }, 1000, function() {
               $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-design').css('left', '0px');
             });
           }
 

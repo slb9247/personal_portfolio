@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 0; }
 
+body {
+  background-color: #663333; }
+
 /* ---------- KEYFRAMES ---------- */
 @keyframes slideUp {
   0% {
@@ -26,41 +29,42 @@ nav {
     display: inline-block;
     padding: 10px; }
   nav a {
+    color: #ccccff;
     text-decoration: none; }
 
 /* ---------- HOME ---------- */
 /* ---------- PAGES GENERAL ---------- */
+#container {
+  position: relative;
+  max-width: 600px; }
+
+.page {
+  margin-top: 30px;
+  position: absolute; }
+
 #page-home {
   opacity: 1;
-  background-color: purple;
-  width: 80%; }
+  background-color: purple; }
 
 #page-about {
-  opacity: 0;
-  background-color: yellow; }
+  opacity: 0; }
 
 #page-design {
-  opacity: 0;
-  background-color: red; }
+  opacity: 0; }
 
 #page-dev {
   opacity: 0;
   background-color: blue; }
 
+/* ---------- HOME PAGE ---------- */
+/* ---------- ABOUT PAGE ---------- */
+#text-bio {
+  background-color: #ad9b97;
+  width: 300px;
+  height: 300px;
+  padding: 20px; }
+
 /* ---------- DESIGN PAGE ---------- */
-#samp1,
-#samp2,
-#samp3 {
-  width: 100%; }
-  #samp1 img,
-  #samp2 img,
-  #samp3 img {
-    width: 100%; }
-  @media (min-width: 560px) {
-    #samp1,
-    #samp2,
-    #samp3 {
-      width: 50%;
-      float: left; } }
+/* ---------- DEVELOPMENT PAGE ---------- */
 
 /*# sourceMappingURL=main.css.map */

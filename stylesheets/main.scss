@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #663333;
+}
+
 /* ---------- KEYFRAMES ---------- */
 @keyframes slideUp {
   0% {
@@ -39,6 +43,7 @@ nav {
   }
 
   a {
+    color: #ccccff;
     text-decoration: none;
   }
 }
@@ -53,20 +58,28 @@ nav {
 // }
 
 /* ---------- PAGES GENERAL ---------- */
+#container {
+  position: relative;
+  max-width: 600px;
+}
+
+.page {
+  margin-top: 30px;
+  position: absolute;
+}
+
 #page-home {
   opacity: 1;
   background-color: purple;
-  width: 80%;
+  //width: 80%;
 }
 
 #page-about {
   opacity: 0;
-  background-color: yellow;
 }
 
 #page-design {
   opacity: 0;
-  background-color: red;
 }
 
 #page-dev {
@@ -74,18 +87,36 @@ nav {
   background-color: blue;
 }
 
-/* ---------- DESIGN PAGE ---------- */
-#samp1,
-#samp2,
-#samp3 {
-  width: 100%;
+/* ---------- HOME PAGE ---------- */
 
-  img {
-    width: 100%;
-  }
+/* ---------- ABOUT PAGE ---------- */
+#img-bio {
 
-  @media (min-width: 560px) {
-    width: 50%;
-    float: left;
-  }
 }
+
+#text-bio {
+  background-color: #ad9b97;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+
+
+
+/* ---------- DESIGN PAGE ---------- */
+// #samp1,
+// #samp2,
+// #samp3 {
+//   width: 100%;
+//
+//   img {
+//     width: 100%;
+//   }
+//
+//   @media (min-width: 560px) {
+//     width: 50%;
+//     float: left;
+//   }
+// }
+
+/* ---------- DEVELOPMENT PAGE ---------- */
