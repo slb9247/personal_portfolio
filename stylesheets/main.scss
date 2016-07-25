@@ -1,3 +1,13 @@
+//@media screen and (min-width:320px){} // mobile portrait
+//@media screen and (min-width:480px){} // mobile landscape
+//@media screen and (min-width:768px){} // ipad portrait
+//@media screen and (min-width:1024px){} // browser, ipad landscape
+//@media screen and (min-width:1200px){} // browser
+//@media screen and (min-width:1600px){} // browser
+
+$hamburger-layer-width: 30px; // overrides default of 40px
+@import 'hamburgers/hamburgers';
+
 /* ---------- GENERAL ---------- */
 * {
   margin: 0 auto;
@@ -23,7 +33,6 @@ body {
   }
 }
 
-
 /* ---------- ANIMATIONS ---------- */
 //an element that slides up and fades out
 .animate_elem_slideup {
@@ -32,10 +41,51 @@ body {
   transition-timing-function: ease-in;
 }
 
+/* ---------- LINKS ---------- */
+.menu-main {
+  a:link {
+    color: #ccccff;
+  }
+
+  a:visited {
+    color: #ccccff;
+  }
+
+  a:hover {
+    color: #ad9b97;
+  }
+
+  a:active {
+    color: #ad9b97;
+  }
+}
+
+.menu-drop {
+  a:link {
+    color: #ccccff;
+  }
+
+  a:visited {
+    color: #ccccff;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+
+  a:active {
+    color: #ffffff;
+  }
+}
 
 /* ---------- NAV ---------- */
-nav {
+nav .menu-main {
   text-align: center;
+  display: none;
+
+  ul {
+    margin: 30px 0px;
+  }
 
   li {
     display: inline-block;
@@ -45,9 +95,45 @@ nav {
   a {
     color: #ccccff;
     text-decoration: none;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: 440px) {
+    display: block;
   }
 }
 
+nav .menu-drop {
+  display: none; // don't show until hamburger is clicked
+  text-align: center;
+  z-index: 1000;
+  padding: 50px 0px;
+  background-color: #ad9b97;
+  height: 100vh;
+
+  li {
+    padding: 10px;
+  }
+
+  a {
+    color: #ccccff;
+    text-decoration: none;
+    font-size: 1.4em;
+  }
+}
+
+.hamStyle {
+  z-index: 1000;
+  float: right;
+
+  @media (min-width: 440px) {
+    display: none;
+  }
+}
+
+.clicked {
+  border-bottom: 1px solid #ad9b97;
+}
 
 /* ---------- HOME ---------- */
 // #splash {
@@ -60,12 +146,14 @@ nav {
 /* ---------- PAGES GENERAL ---------- */
 #container {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
+  //padding: 50px;
 }
 
 .page {
   margin-top: 30px;
   position: absolute;
+  width: 100%;
 }
 
 #page-home {
@@ -87,21 +175,47 @@ nav {
   background-color: blue;
 }
 
+p {
+  font-size: 1.1em;
+}
+
 /* ---------- HOME PAGE ---------- */
 
 /* ---------- ABOUT PAGE ---------- */
 #img-bio {
+  text-align: center;
 
+  img {
+    width: 80%;
+
+    @media (min-width: 480px) {
+      width: 364px;
+      height: 449px;
+    }
+
+    @media (min-width: 960px) {
+      float: left;
+    }
+  }
 }
 
 #text-bio {
+  box-sizing: border-box;
   background-color: #ad9b97;
-  width: 300px;
-  height: 300px;
+  width: 80%;
+  min-height: 300px;
   padding: 20px;
+  margin-top: 20px;
+
+  @media (min-width: 480px) {
+    width: 364px;
+  }
+
+  @media (min-width: 960px) {
+    float: right;
+    margin-top: 0px;
+  }
 }
-
-
 
 /* ---------- DESIGN PAGE ---------- */
 // #samp1,

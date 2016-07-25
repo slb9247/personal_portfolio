@@ -9,6 +9,7 @@
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/hamburgers.js"></script>
     </head>
     <body>
 
@@ -19,19 +20,34 @@
           <!-- background image -->
         </div>
 
-        <p>HOME PAGE</p>
+
+
 
       </div> <!-- end home page-->
 
 
 
       <nav>
-        <ul>
+        <ul class="menu-main">
           <li><a href="#" id="link-home">Home</a></li> <!-- only display when not on home page -->
           <li><a href="#" id="link-about">About</a></li>
           <li><a href="#" id="link-design">Design</a></li>
           <li><a href="#" id="link-dev">Development</a></li>
           <li><a href="#" id="link-contact">Contact</a></li>
+        </ul>
+
+        <div class="hamStyle hamburger hamburger--squeeze js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+
+        <ul class="menu-drop">
+          <li><a href="#" id="drop-home">Home</a></li>
+          <li><a href="#" id="drop-about">About</a></li>
+          <li><a href="#" id="drop-design">Design</a></li>
+          <li><a href="#" id="drop-dev">Development</a></li>
+          <li><a href="#" id="drop-contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -41,12 +57,24 @@
       <div id="page-about" class="page">
 
         <div id="img-bio">
-          <img src="">
+          <img src="images/bio_photo.jpg" alt="bio_photo" />
         </div>
 
         <div id="text-bio">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <br>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <br>
+
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
 
@@ -81,7 +109,6 @@
 <!-- DEVELOPMENT PAGE -->
       <div id="page-dev" class="page">
 
-        <p>DEVELOPMENT PAGE</p>
 
 
       </div> <!-- end dev page -->

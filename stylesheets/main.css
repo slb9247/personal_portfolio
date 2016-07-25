@@ -1,3 +1,77 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+ * Squeeze
+ */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.1s 0.14s ease, opacity 0.1s ease; }
+  .hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease, opacity 0.1s 0.14s ease; }
+  .hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
 /* ---------- GENERAL ---------- */
 * {
   margin: 0 auto;
@@ -22,25 +96,76 @@ body {
   animation-duration: 5s;
   transition-timing-function: ease-in; }
 
+/* ---------- LINKS ---------- */
+.menu-main a:link {
+  color: #ccccff; }
+.menu-main a:visited {
+  color: #ccccff; }
+.menu-main a:hover {
+  color: #ad9b97; }
+.menu-main a:active {
+  color: #ad9b97; }
+
+.menu-drop a:link {
+  color: #ccccff; }
+.menu-drop a:visited {
+  color: #ccccff; }
+.menu-drop a:hover {
+  color: #ffffff; }
+.menu-drop a:active {
+  color: #ffffff; }
+
 /* ---------- NAV ---------- */
-nav {
-  text-align: center; }
-  nav li {
+nav .menu-main {
+  text-align: center;
+  display: none; }
+  nav .menu-main ul {
+    margin: 30px 0px; }
+  nav .menu-main li {
     display: inline-block;
     padding: 10px; }
-  nav a {
+  nav .menu-main a {
     color: #ccccff;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-bottom: 5px; }
+  @media (min-width: 440px) {
+    nav .menu-main {
+      display: block; } }
+
+nav .menu-drop {
+  display: none;
+  text-align: center;
+  z-index: 1000;
+  padding: 50px 0px;
+  background-color: #ad9b97;
+  height: 100vh; }
+  nav .menu-drop li {
+    padding: 10px; }
+  nav .menu-drop a {
+    color: #ccccff;
+    text-decoration: none;
+    font-size: 1.4em; }
+
+.hamStyle {
+  z-index: 1000;
+  float: right; }
+  @media (min-width: 440px) {
+    .hamStyle {
+      display: none; } }
+
+.clicked {
+  border-bottom: 1px solid #ad9b97; }
 
 /* ---------- HOME ---------- */
 /* ---------- PAGES GENERAL ---------- */
 #container {
   position: relative;
-  max-width: 600px; }
+  max-width: 800px; }
 
 .page {
   margin-top: 30px;
-  position: absolute; }
+  position: absolute;
+  width: 100%; }
 
 #page-home {
   opacity: 1;
@@ -56,13 +181,37 @@ nav {
   opacity: 0;
   background-color: blue; }
 
+p {
+  font-size: 1.1em; }
+
 /* ---------- HOME PAGE ---------- */
 /* ---------- ABOUT PAGE ---------- */
+#img-bio {
+  text-align: center; }
+  #img-bio img {
+    width: 80%; }
+    @media (min-width: 480px) {
+      #img-bio img {
+        width: 364px;
+        height: 449px; } }
+    @media (min-width: 960px) {
+      #img-bio img {
+        float: left; } }
+
 #text-bio {
+  box-sizing: border-box;
   background-color: #ad9b97;
-  width: 300px;
-  height: 300px;
-  padding: 20px; }
+  width: 80%;
+  min-height: 300px;
+  padding: 20px;
+  margin-top: 20px; }
+  @media (min-width: 480px) {
+    #text-bio {
+      width: 364px; } }
+  @media (min-width: 960px) {
+    #text-bio {
+      float: right;
+      margin-top: 0px; } }
 
 /* ---------- DESIGN PAGE ---------- */
 /* ---------- DEVELOPMENT PAGE ---------- */

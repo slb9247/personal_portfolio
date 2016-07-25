@@ -6,6 +6,17 @@ $(document).on('ready', function() {
     $(this).addClass('clicked');
   });
 
+/* hamburger menu */
+  $('.hamburger').on('click', function(e) {
+    $('.hamburger').toggleClass('is-active');
+    $('.menu-drop').slideToggle('fast');
+  });
+
+  $('.menu-drop a').on('click', function() {
+    $('.menu-drop').hide();
+    $('.hamburger').removeClass('is-active');
+  });
+
 
 // home page transition out
 
