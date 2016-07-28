@@ -106,10 +106,14 @@ nav .menu-main {
 nav .menu-drop {
   display: none; // don't show until hamburger is clicked
   text-align: center;
-  z-index: 1000;
+  z-index: 900;
   padding: 50px 0px;
   background-color: #ad9b97;
   height: 100vh;
+
+  @media (min-width: 440px) {
+    display: none !important;
+  }
 
   li {
     padding: 10px;
@@ -151,28 +155,36 @@ nav .menu-drop {
 }
 
 .page {
-  margin-top: 30px;
+  margin-top: 70px;
   position: absolute;
   width: 100%;
+
+  @media (min-width: 440px) {
+    margin-top: 30px;
+  }
 }
 
 #page-home {
-  opacity: 1;
   background-color: purple;
+  opacity: 1;
   //width: 80%;
 }
 
 #page-about {
+  display: none;
   opacity: 0;
 }
 
 #page-design {
+  display: none;
   opacity: 0;
 }
 
 #page-dev {
+  display: none;
   opacity: 0;
   background-color: blue;
+  max-width: 500px;
 }
 
 p {

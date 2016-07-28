@@ -135,10 +135,13 @@ nav .menu-main {
 nav .menu-drop {
   display: none;
   text-align: center;
-  z-index: 1000;
+  z-index: 900;
   padding: 50px 0px;
   background-color: #ad9b97;
   height: 100vh; }
+  @media (min-width: 440px) {
+    nav .menu-drop {
+      display: none !important; } }
   nav .menu-drop li {
     padding: 10px; }
   nav .menu-drop a {
@@ -163,23 +166,30 @@ nav .menu-drop {
   max-width: 800px; }
 
 .page {
-  margin-top: 30px;
+  margin-top: 70px;
   position: absolute;
   width: 100%; }
+  @media (min-width: 440px) {
+    .page {
+      margin-top: 30px; } }
 
 #page-home {
-  opacity: 1;
-  background-color: purple; }
+  background-color: purple;
+  opacity: 1; }
 
 #page-about {
+  display: none;
   opacity: 0; }
 
 #page-design {
+  display: none;
   opacity: 0; }
 
 #page-dev {
+  display: none;
   opacity: 0;
-  background-color: blue; }
+  background-color: blue;
+  max-width: 500px; }
 
 p {
   font-size: 1.1em; }

@@ -1,10 +1,34 @@
 $(document).on('ready', function() {
 
 /* specifies currently clicked on link */
-  $('nav a').on('click', function() {
-    $('nav a').removeClass('clicked');
+  $('.menu-main a').on('click', function() {
+    $('.menu-main a').removeClass('clicked');
     $(this).addClass('clicked');
   });
+
+
+
+/* specifies currently clicked on link from drop menu */
+  $('#drop-home').on('click', function() {
+    $('.menu-main a').removeClass('clicked');
+    $('#link-home').addClass('clicked');
+  });
+
+  $('#drop-about').on('click', function() {
+    $('.menu-main a').removeClass('clicked');
+    $('#link-about').addClass('clicked');
+  });
+
+  $('#drop-design').on('click', function() {
+    $('.menu-main a').removeClass('clicked');
+    $('#link-design').addClass('clicked');
+  });
+
+  $('#drop-dev').on('click', function() {
+    $('.menu-main a').removeClass('clicked');
+    $('#link-dev').addClass('clicked');
+  });
+
 
 /* hamburger menu */
   $('.hamburger').on('click', function(e) {
@@ -25,8 +49,10 @@ $(document).on('ready', function() {
     //   }, 5000); // event listener?
     //
 
+
+
 /* home page click function */
-  $('#link-home').on('click', function() {
+  $('#link-home, #drop-home').on('click', function() {
 
       // if the home page is NOT the current page...
       if (!$('#page-home').hasClass('current')) {
@@ -37,10 +63,15 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-home').animate({'opacity': '1'}, 500);
+              $('#page-about').css('display', 'none'); //after 500 sec?
+
+              $('#page-home').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-home').css('display', 'initial'); // reinstate display
+
               // moves back to original location while hidden
               $('#page-about').css('left', '0px');
-            })
+            });
           }
 
           // if the current page is design
@@ -49,7 +80,13 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-home').animate({'opacity': '1'}, 500);
+              $('#page-design').css('display', 'none'); //after 500 sec?
+
+              $('#page-home').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-home').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-design').css('left', '0px');
             });
           }
@@ -60,7 +97,13 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-home').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('display', 'none'); //after 500 sec?
+
+              $('#page-home').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-home').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-dev').css('left', '0px');
             });
           }
@@ -74,7 +117,7 @@ $(document).on('ready', function() {
   }); // ends link-dev click function
 
 /* about page click function */
-  $('#link-about').on('click', function() {
+  $('#link-about, #drop-about').on('click', function() {
 
       // if the about page is NOT the current page...
       if (!$('#page-about').hasClass('current')) {
@@ -85,7 +128,13 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-home').css('display', 'none'); //after 500 sec?
+
+              $('#page-about').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-about').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-home').css('left', '0px');
             });
           }
@@ -96,7 +145,13 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-design').css('display', 'none'); //after 500 sec?
+
+              $('#page-about').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-about').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-design').css('left', '0px');
             });
           }
@@ -107,7 +162,13 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-about').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('display', 'none'); //after 500 sec?
+
+              $('#page-about').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-about').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-dev').css('left', '0px');
             });
           }
@@ -123,7 +184,7 @@ $(document).on('ready', function() {
 
 
 /* design page click function */
-  $('#link-design').on('click', function() {
+  $('#link-design, #drop-design').on('click', function() {
 
       // if the design page is NOT the current page...
       if (!$('#page-design').hasClass('current')) {
@@ -134,7 +195,13 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-home').css('display', 'none'); //after 500 sec?
+
+              $('#page-design').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-design').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-home').css('left', '0px');
             });
           }
@@ -145,9 +212,15 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-about').css('display', 'none'); //after 500 sec?
+
+              $('#page-design').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-design').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-about').css('left', '0px');
-            })
+            });
           }
 
           // if the current page is development
@@ -156,7 +229,13 @@ $(document).on('ready', function() {
               left: '100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-design').animate({'opacity': '1'}, 500);
+              $('#page-dev').css('display', 'none'); //after 500 sec?
+
+              $('#page-design').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-design').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-dev').css('left', '0px');
             });
           }
@@ -172,7 +251,7 @@ $(document).on('ready', function() {
 
 
 /* development page click function */
-  $('#link-dev').on('click', function() {
+  $('#link-dev, #drop-dev').on('click', function() {
 
       // if the development page is NOT the current page...
       if (!$('#page-dev').hasClass('current')) {
@@ -183,7 +262,13 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-home').css('display', 'none'); //after 500 sec?
+
+              $('#page-dev').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-dev').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-home').css('left', '0px');
             });
           }
@@ -194,9 +279,15 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-about').css('display', 'none'); //after 500 sec?
+
+              $('#page-dev').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-dev').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-about').css('left', '0px');
-            })
+            });
           }
 
           // if the current page is design
@@ -205,7 +296,13 @@ $(document).on('ready', function() {
               left: '-100px',
               opacity: 0
             }, 1000, function() {
-              $('#page-dev').animate({'opacity': '1'}, 500);
+              $('#page-design').css('display', 'none'); //after 500 sec?
+
+              $('#page-dev').animate({'opacity': '1'}, 500); // fade clicked page in
+
+              $('#page-dev').css('display', 'initial'); // reinstate display
+
+              // moves back to original location while hidden
               $('#page-design').css('left', '0px');
             });
           }
