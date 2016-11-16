@@ -5,9 +5,6 @@
 //@media screen and (min-width:1200px){} // browser
 //@media screen and (min-width:1600px){} // browser
 
-$hamburger-layer-width: 30px; // overrides default of 40px
-@import 'hamburgers/hamburgers';
-
 /* ---------- GENERAL ---------- */
 * {
   margin: 0 auto;
@@ -18,31 +15,7 @@ body {
   background-color: #663333;
 }
 
-/* ---------- KEYFRAMES ---------- */
-@keyframes slideUp {
-  0% {
-    opacity: 1;
-    height: 90vh;
-    overflow: hidden;
-  }
-
-  100% {
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-
-/* ---------- ANIMATIONS ---------- */
-//an element that slides up and fades out
-.animate_elem_slideup {
-  animation-name: slideUp;
-  animation-duration: 5s;
-  transition-timing-function: ease-in;
-}
-
 /* ---------- LINKS ---------- */
-.menu-main {
   a:link {
     color: #ccccff;
   }
@@ -58,30 +31,10 @@ body {
   a:active {
     color: #ad9b97;
   }
-}
-
-.menu-drop {
-  a:link {
-    color: #ccccff;
-  }
-
-  a:visited {
-    color: #ccccff;
-  }
-
-  a:hover {
-    color: #ffffff;
-  }
-
-  a:active {
-    color: #ffffff;
-  }
-}
 
 /* ---------- NAV ---------- */
-nav .menu-main {
+nav {
   text-align: center;
-  display: none;
 
   ul {
     margin: 30px 0px;
@@ -98,40 +51,8 @@ nav .menu-main {
     padding-bottom: 5px;
   }
 
-  @media (min-width: 440px) {
+  @media (min-width: 480px) {
     display: block;
-  }
-}
-
-nav .menu-drop {
-  display: none; // don't show until hamburger is clicked
-  text-align: center;
-  z-index: 900;
-  padding: 50px 0px;
-  background-color: #ad9b97;
-  height: 100vh;
-
-  @media (min-width: 440px) {
-    display: none !important;
-  }
-
-  li {
-    padding: 10px;
-  }
-
-  a {
-    color: #ccccff;
-    text-decoration: none;
-    font-size: 1.4em;
-  }
-}
-
-.hamStyle {
-  z-index: 1000;
-  float: right;
-
-  @media (min-width: 440px) {
-    display: none;
   }
 }
 
@@ -140,12 +61,7 @@ nav .menu-drop {
 }
 
 /* ---------- HOME ---------- */
-// #splash {
-//   background-image: url('../images/design.jpg');
-//   background-size: cover;
-// //  background-position: center;
-//   height: 90vh;
-// }
+
 
 /* ---------- PAGES GENERAL ---------- */
 #container {
@@ -159,7 +75,7 @@ nav .menu-drop {
   position: absolute;
   width: 100%;
 
-  @media (min-width: 440px) {
+  @media (min-width: 480px) {
     margin-top: 30px;
   }
 }
@@ -175,16 +91,9 @@ nav .menu-drop {
   opacity: 0;
 }
 
-#page-design {
+#page-work {
   display: none;
   opacity: 0;
-}
-
-#page-dev {
-  display: none;
-  opacity: 0;
-  background-color: blue;
-  max-width: 500px;
 }
 
 p {
@@ -229,20 +138,4 @@ p {
   }
 }
 
-/* ---------- DESIGN PAGE ---------- */
-// #samp1,
-// #samp2,
-// #samp3 {
-//   width: 100%;
-//
-//   img {
-//     width: 100%;
-//   }
-//
-//   @media (min-width: 560px) {
-//     width: 50%;
-//     float: left;
-//   }
-// }
-
-/* ---------- DEVELOPMENT PAGE ---------- */
+/* ---------- WORK PAGE ---------- */
