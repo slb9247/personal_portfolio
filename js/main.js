@@ -1,10 +1,16 @@
 $(document).on('ready', function() {
 
+  $(function() {
+      location.reload();
+  });
+
+
 /* specifies current link/page */
   $('nav a').on('click', function() {
     $('nav a').removeClass('clicked');
     $(this).addClass('clicked');
   });
+
 
 /* home page click function */
   $('#link-home').on('click', function() {
@@ -15,7 +21,6 @@ $(document).on('ready', function() {
           // if the current page is about
           if ($('#page-about').hasClass('current')) {
             $('#page-about').animate({
-              left: '100px',
               opacity: 0
             }, 1000, function() {
               $('#page-about').css('display', 'none'); //after 500 sec?
@@ -23,15 +28,12 @@ $(document).on('ready', function() {
               $('#page-home').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-home').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-about').css('left', '0px'); // clicked-from page moves back to original location while hidden
             });
           }
 
           // if the current page is work
           else if ($('#page-work').hasClass('current')) {
             $('#page-work').animate({
-              left: '100px',
               opacity: 0
             }, 1000, function() {
               $('#page-work').css('display', 'none'); //after 500 sec?
@@ -39,8 +41,6 @@ $(document).on('ready', function() {
               $('#page-home').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-home').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-work').css('left', '0px'); // clicked-from moves back to original location while hidden
             });
           }
 
@@ -61,7 +61,6 @@ $(document).on('ready', function() {
           // if the current page is home
           if ($('#page-home').hasClass('current')) {
             $('#page-home').animate({
-              left: '-100px',
               opacity: 0
             }, 1000, function() {
               $('#page-home').css('display', 'none'); //after 500 sec?
@@ -69,15 +68,12 @@ $(document).on('ready', function() {
               $('#page-about').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-about').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-home').css('left', '0px'); // clicked-from moves back to original location while hidden
             });
           }
 
           // if the current page is work
           else if ($('#page-work').hasClass('current')) {
             $('#page-work').animate({
-              left: '100px',
               opacity: 0
             }, 1000, function() {
               $('#page-work').css('display', 'none'); //after 500 sec?
@@ -85,8 +81,6 @@ $(document).on('ready', function() {
               $('#page-about').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-about').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-work').css('left', '0px'); // clicked-from moves back to original location while hidden
             });
           }
 
@@ -108,7 +102,6 @@ $(document).on('ready', function() {
           // if the current page is home
           if ($('#page-home').hasClass('current')) {
             $('#page-home').animate({
-              left: '-100px',
               opacity: 0
             }, 1000, function() {
               $('#page-home').css('display', 'none'); //after 500 sec?
@@ -116,15 +109,12 @@ $(document).on('ready', function() {
               $('#page-work').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-work').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-home').css('left', '0px'); // clicked-from moves back to original location while hidden
             });
           }
 
           // if the current page is about
           else if ($('#page-about').hasClass('current')) {
             $('#page-about').animate({
-              left: '-100px',
               opacity: 0
             }, 1000, function() {
               $('#page-about').css('display', 'none'); //after 500 sec?
@@ -132,8 +122,6 @@ $(document).on('ready', function() {
               $('#page-work').animate({'opacity': '1'}, 500); // clicked page fades in
 
               $('#page-work').css('display', 'initial'); // reinstates clicked page's display
-
-              $('#page-about').css('left', '0px'); // clicked-from moves back to original location while hidden
             });
           }
 

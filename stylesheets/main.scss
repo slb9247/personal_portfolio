@@ -64,16 +64,20 @@ nav {
 
 
 /* ---------- PAGES GENERAL ---------- */
-#container {
+#container-home,
+#container-about,
+#container-work {
   position: relative;
   max-width: 800px;
-  //padding: 50px;
 }
 
 .page {
   margin-top: 70px;
   position: absolute;
-  width: 100%;
+  width: 95%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 
   @media (min-width: 480px) {
     margin-top: 30px;
