@@ -1,16 +1,5 @@
 $(document).on('ready', function() {
 
-  $(function() {
-      location.reload();
-  });
-
-
-/* specifies current link/page */
-  $('nav a').on('click', function() {
-    $('nav a').removeClass('clicked');
-    $(this).addClass('clicked');
-  });
-
 
 /* home page click function */
   $('#link-home').on('click', function() {
