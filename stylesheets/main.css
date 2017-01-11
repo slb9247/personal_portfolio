@@ -624,6 +624,7 @@ a:active {
 nav {
   text-align: center;
   height: 100px;
+  margin-bottom: 60px;
   /* end #fixedNav */ }
   nav #fixedNav {
     background-color: #efefef;
@@ -662,9 +663,18 @@ nav {
         display: block; } }
     nav #nav-main li {
       display: inline-block;
-      padding: 10px; }
+      padding: 10px;
+      vertical-align: middle; }
     nav #nav-main p {
       display: inline-block; }
+    @media (min-width: 600px) {
+      nav #nav-main #logo_small {
+        display: none; } }
+    nav #nav-main #logo_big {
+      display: none; }
+      @media (min-width: 600px) {
+        nav #nav-main #logo_big {
+          display: inline-block; } }
   nav #menu-overlay {
     display: none;
     /* jquery added toggle */
@@ -704,7 +714,7 @@ nav {
   /* fixed nav offset */
   display: block;
   content: '';
-  height: 160px;
+  height: 100px;
   margin-top: -100px; }
   @media (min-width: 480px) {
     .main-page::before {

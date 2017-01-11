@@ -46,6 +46,7 @@ img {
 nav {
   text-align: center;
   height: 100px;
+  margin-bottom: 60px;
 
   #fixedNav {
     background-color: #efefef; //CHANGE
@@ -98,6 +99,7 @@ nav {
     li {
       display: inline-block;
       padding: 10px;
+      vertical-align: middle;
     }
 
     a {
@@ -106,6 +108,21 @@ nav {
 
     p {
       display: inline-block
+    }
+
+    #logo_small {
+
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+
+    #logo_big {
+      display: none;
+
+      @media (min-width: 600px) {
+        display: inline-block;
+      }
     }
   }
 
@@ -157,7 +174,7 @@ nav {
 .main-page::before { /* fixed nav offset */
   display: block;
   content: '';
-  height: 160px;
+  height: 100px;
   margin-top: -100px;
 
   @media (min-width: 480px) {
