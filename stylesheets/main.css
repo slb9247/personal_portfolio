@@ -603,12 +603,16 @@
 body {
   background-color: #663333; }
 
+img {
+  display: block;
+  /* removes default gap under image */ }
+
 /* ---------- LINKS ---------- */
 a:link {
-  color: #ccccff; }
+  color: #000000; }
 
 a:visited {
-  color: #ccccff; }
+  color: #000000; }
 
 a:hover {
   color: #ad9b97; }
@@ -622,7 +626,7 @@ nav {
   height: 100px;
   /* end #fixedNav */ }
   nav #fixedNav {
-    background-color: #e3e3e3;
+    background-color: #efefef;
     width: 100%;
     height: 100px;
     position: fixed;
@@ -644,8 +648,6 @@ nav {
         transform: translateY(-50%);
         left: 0; }
         nav #fixedNav #navWrap #logo-mobile img {
-          display: block;
-          /* removes default gap under image */
           width: 100%; }
       nav #fixedNav #navWrap .hamburger {
         position: absolute;
@@ -653,30 +655,37 @@ nav {
         transform: translateY(-50%);
         right: 0;
         padding: 0; }
-  nav #menu-main {
+  nav #nav-main {
     display: none; }
     @media (min-width: 480px) {
-      nav #menu-main {
+      nav #nav-main {
         display: block; } }
-    nav #menu-main li {
+    nav #nav-main li {
       display: inline-block;
       padding: 10px; }
-    nav #menu-main p {
+    nav #nav-main p {
       display: inline-block; }
   nav #menu-overlay {
     display: none;
     /* jquery added toggle */
-    background-color: #efefef;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 1100; }
+    background-color: #efefef;
+    z-index: 900; }
+    @media (min-width: 480px) {
+      nav #menu-overlay {
+        display: none !important; } }
     nav #menu-overlay #menu-overlayContent {
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
+      nav #menu-overlay #menu-overlayContent li {
+        padding: 15px; }
+      nav #menu-overlay #menu-overlayContent a {
+        font-size: 1.2em; }
 
 /* end nav */
 .current-link {
@@ -684,20 +693,34 @@ nav {
 
 /* ---------- PAGES GENERAL ---------- */
 .container {
-  width: 85%; }
+  width: 85%;
+  min-height: 100px;
+  padding-bottom: 60px; }
   @media (min-width: 480px) {
     .container {
-      background-color: #ffffff; } }
+      background-color: #efefef; } }
 
 .main-page::before {
   /* fixed nav offset */
   display: block;
   content: '';
-  height: 100px;
+  height: 160px;
   margin-top: -100px; }
   @media (min-width: 480px) {
     .main-page::before {
       display: none; } }
+
+footer {
+  height: 80px;
+  text-align: center;
+  background-color: #fff; }
+  @media (min-width: 480px) {
+    footer {
+      background-color: #663333; } }
+  footer p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
 
 /* ---------- HOME PAGE ---------- */
 /* ---------- ABOUT PAGE ---------- */
@@ -709,9 +732,6 @@ nav {
       #img-bio img {
         width: 364px;
         height: 449px; } }
-    @media (min-width: 960px) {
-      #img-bio img {
-        float: left; } }
 
 #text-bio {
   box-sizing: border-box;
@@ -723,10 +743,6 @@ nav {
   @media (min-width: 480px) {
     #text-bio {
       width: 364px; } }
-  @media (min-width: 960px) {
-    #text-bio {
-      float: right;
-      margin-top: 0px; } }
 
 /* ---------- WORK PAGE ---------- */
 /* ---------- CONTACT PAGE ---------- */
