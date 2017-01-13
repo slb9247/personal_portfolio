@@ -756,5 +756,8 @@ footer {
 
 /* ---------- WORK PAGE ---------- */
 /* ---------- CONTACT PAGE ---------- */
+#main-contact p {
+  text-align: center;
+  font-size: 3.5em; }
 
 /*# sourceMappingURL=main.css.map */
