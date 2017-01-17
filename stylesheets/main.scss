@@ -46,7 +46,10 @@ img {
 nav {
   text-align: center;
   height: 100px;
-  margin-bottom: 60px;
+
+  @media (min-width: 480px) {
+    margin-bottom: 60px;
+  }
 
   #fixedNav {
     background-color: #efefef; //CHANGE
@@ -162,12 +165,12 @@ nav {
 
 /* ---------- PAGES GENERAL ---------- */
 .container {
-  width: 85%;
   min-height: 100px;
-  padding-bottom: 60px;
 
   @media (min-width: 480px) {
     background-color: #efefef; //CHANGE
+    width: 85%;
+    padding-bottom: 60px;
   }
 }
 
@@ -199,19 +202,34 @@ footer {
 }
 
 /* ---------- HOME PAGE ---------- */
+#main-home {
+  text-align: center;
 
+  div {
+
+    @media (min-width: 1024px) {
+      display: inline-block;
+    }
+  }
+
+  img {
+    width: 100%;
+
+    @media (min-width: 480px) {
+      width: auto;
+    }
+  }
+}
 
 
 /* ---------- ABOUT PAGE ---------- */
 #img-bio {
-  text-align: center;
 
   img {
-    width: 80%;
+    width: 75%;
 
     @media (min-width: 480px) {
-      width: 364px;
-      height: 449px;
+       width: 350px;
     }
   }
 }
@@ -219,17 +237,27 @@ footer {
 #text-bio {
   box-sizing: border-box;
   background-color: #ad9b97;
-  width: 80%;
+  width: 75%;
   min-height: 300px;
   padding: 20px;
   margin-top: 20px;
 
   @media (min-width: 480px) {
-    width: 364px;
+    width: 350px;
   }
 }
 
 /* ---------- WORK PAGE ---------- */
+#main-work {
+
+  img {
+    width: 100%;
+
+    @media (min-width: 480px) {
+      width: auto;
+    }
+  }
+}
 
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
