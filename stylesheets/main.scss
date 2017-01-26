@@ -223,6 +223,10 @@ footer {
 
 
 /* ---------- ABOUT PAGE ---------- */
+#main-about {
+  margin-top: 60px;
+}
+
 #img-bio {
 
   img {
@@ -250,6 +254,13 @@ footer {
 /* ---------- WORK PAGE ---------- */
 #main-work {
 
+  div {
+
+    @media (min-width: 1024px) {
+      display: inline-block;
+    }
+  }
+
   img {
     width: 100%;
 
@@ -261,9 +272,35 @@ footer {
 
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
+  margin-top: 60px;
 
   p {
     text-align: center;
     font-size: 3.5em;
+  }
+}
+
+#social {
+  text-align: center;
+
+  .icon {
+    padding-top: 30px;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  #email,
+  #facebook,
+  #linkedin {
+
+    @media (min-width: 768px) {
+      padding-right: 30px;
+    }
   }
 }

@@ -747,6 +747,9 @@ footer {
         width: auto; } }
 
 /* ---------- ABOUT PAGE ---------- */
+#main-about {
+  margin-top: 60px; }
+
 #img-bio img {
   width: 75%; }
   @media (min-width: 480px) {
@@ -765,6 +768,9 @@ footer {
       width: 350px; } }
 
 /* ---------- WORK PAGE ---------- */
+@media (min-width: 1024px) {
+  #main-work div {
+    display: inline-block; } }
 #main-work img {
   width: 100%; }
   @media (min-width: 480px) {
@@ -772,8 +778,25 @@ footer {
       width: auto; } }
 
 /* ---------- CONTACT PAGE ---------- */
-#main-contact p {
-  text-align: center;
-  font-size: 3.5em; }
+#main-contact {
+  margin-top: 60px; }
+  #main-contact p {
+    text-align: center;
+    font-size: 3.5em; }
+
+#social {
+  text-align: center; }
+  #social .icon {
+    padding-top: 30px; }
+    @media (min-width: 768px) {
+      #social .icon {
+        display: inline-block; } }
+    #social .icon a {
+      display: inline-block; }
+  @media (min-width: 768px) {
+    #social #email,
+    #social #facebook,
+    #social #linkedin {
+      padding-right: 30px; } }
 
 /*# sourceMappingURL=main.css.map */
