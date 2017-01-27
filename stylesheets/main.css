@@ -650,8 +650,6 @@ nav {
         top: 50%;
         transform: translateY(-50%);
         left: 0; }
-        nav #fixedNav #navWrap #logo-mobile img {
-          width: 100%; }
       nav #fixedNav #navWrap .hamburger {
         position: absolute;
         top: 50%;
@@ -748,15 +746,22 @@ footer {
 
 /* ---------- ABOUT PAGE ---------- */
 #main-about {
+  text-align: center;
   margin-top: 60px; }
+  #main-about #bio div {
+    vertical-align: top; }
+    @media (min-width: 1024px) {
+      #main-about #bio div {
+        display: inline-block; } }
+  #main-about #bio #img-bio img {
+    width: 75%; }
+    @media (min-width: 480px) {
+      #main-about #bio #img-bio img {
+        width: 350px; } }
 
-#img-bio img {
-  width: 75%; }
-  @media (min-width: 480px) {
-    #img-bio img {
-      width: 350px; } }
-
+/* end #main-about */
 #text-bio {
+  text-align: justify;
   box-sizing: border-box;
   background-color: #ad9b97;
   width: 75%;
@@ -766,37 +771,42 @@ footer {
   @media (min-width: 480px) {
     #text-bio {
       width: 350px; } }
+  @media (min-width: 1024px) {
+    #text-bio {
+      margin-top: 0;
+      margin-left: 20px; } }
 
 /* ---------- WORK PAGE ---------- */
-@media (min-width: 1024px) {
-  #main-work div {
-    display: inline-block; } }
-#main-work img {
-  width: 100%; }
-  @media (min-width: 480px) {
-    #main-work img {
-      width: auto; } }
+#main-work {
+  text-align: center; }
+  @media (min-width: 1024px) {
+    #main-work div {
+      display: inline-block; } }
+  #main-work img {
+    width: 100%; }
+    @media (min-width: 480px) {
+      #main-work img {
+        width: auto; } }
 
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
+  text-align: center;
   margin-top: 60px; }
   #main-contact p {
     text-align: center;
     font-size: 3.5em; }
 
-#social {
-  text-align: center; }
-  #social .icon {
-    padding-top: 30px; }
-    @media (min-width: 768px) {
-      #social .icon {
-        display: inline-block; } }
-    #social .icon a {
-      display: inline-block; }
+#social .icon {
+  padding-top: 30px; }
   @media (min-width: 768px) {
-    #social #email,
-    #social #facebook,
-    #social #linkedin {
-      padding-right: 30px; } }
+    #social .icon {
+      display: inline-block; } }
+  #social .icon a {
+    display: inline-block; }
+@media (min-width: 768px) {
+  #social #email,
+  #social #facebook,
+  #social #linkedin {
+    padding-right: 30px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -76,10 +76,6 @@ nav {
         top: 50%;
         transform: translateY(-50%);
         left: 0;
-
-        img {
-          width: 100%;
-        }
       }
 
       .hamburger {
@@ -221,24 +217,36 @@ footer {
   }
 }
 
-
 /* ---------- ABOUT PAGE ---------- */
 #main-about {
+  text-align: center;
   margin-top: 60px;
-}
 
-#img-bio {
+  #bio {
 
-  img {
-    width: 75%;
+    div {
+      vertical-align: top;
 
-    @media (min-width: 480px) {
-       width: 350px;
+      @media (min-width: 1024px) {
+        display: inline-block;
+      }
+    }
+
+    #img-bio {
+
+      img {
+        width: 75%;
+
+        @media (min-width: 480px) {
+           width: 350px;
+        }
+      }
     }
   }
-}
+} /* end #main-about */
 
 #text-bio {
+  text-align: justify;
   box-sizing: border-box;
   background-color: #ad9b97;
   width: 75%;
@@ -249,10 +257,16 @@ footer {
   @media (min-width: 480px) {
     width: 350px;
   }
+
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    margin-left: 20px;
+  }
 }
 
 /* ---------- WORK PAGE ---------- */
 #main-work {
+  text-align: center;
 
   div {
 
@@ -272,6 +286,7 @@ footer {
 
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
+  text-align: center;
   margin-top: 60px;
 
   p {
@@ -281,7 +296,6 @@ footer {
 }
 
 #social {
-  text-align: center;
 
   .icon {
     padding-top: 30px;
