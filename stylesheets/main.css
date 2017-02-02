@@ -748,18 +748,19 @@ footer {
 #main-about {
   text-align: center;
   margin-top: 60px; }
-  #main-about #bio div {
-    vertical-align: top; }
-    @media (min-width: 1024px) {
-      #main-about #bio div {
-        display: inline-block; } }
-  #main-about #bio #img-bio img {
-    width: 75%; }
-    @media (min-width: 480px) {
-      #main-about #bio #img-bio img {
-        width: 350px; } }
 
-/* end #main-about */
+#bio div {
+  vertical-align: top; }
+  @media (min-width: 1024px) {
+    #bio div {
+      display: inline-block; } }
+
+#img-bio img {
+  width: 75%; }
+  @media (min-width: 480px) {
+    #img-bio img {
+      width: 350px; } }
+
 #text-bio {
   text-align: justify;
   box-sizing: border-box;
@@ -780,13 +781,29 @@ footer {
 #main-work {
   text-align: center; }
   @media (min-width: 1024px) {
-    #main-work div {
+    #main-work .workColumn {
       display: inline-block; } }
+  @media (min-width: 480px) {
+    #main-work .work {
+      margin-bottom: 20px; } }
+  #main-work .work a {
+    display: inline-block; }
   #main-work img {
     width: 100%; }
     @media (min-width: 480px) {
       #main-work img {
         width: auto; } }
+
+@media (min-width: 1024px) {
+  #workCol1 #col1Samp2 {
+    margin-bottom: 0; } }
+
+@media (min-width: 1024px) {
+  #workCol2 {
+    margin-left: 20px; } }
+@media (min-width: 480px) {
+  #workCol2 #col2Samp2 {
+    margin-bottom: 0; } }
 
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
@@ -803,10 +820,13 @@ footer {
       display: inline-block; } }
   #social .icon a {
     display: inline-block; }
+
 @media (min-width: 768px) {
-  #social #email,
-  #social #facebook,
-  #social #linkedin {
+  #email,
+  #facebook,
+  #linkedin {
     padding-right: 30px; } }
+
+/* ---------- PROJECT: ANIMAL CRACKERS  ---------- */
 
 /*# sourceMappingURL=main.css.map */

@@ -101,10 +101,6 @@ nav {
       vertical-align: middle;
     }
 
-    a {
-
-    }
-
     p {
       display: inline-block
     }
@@ -221,29 +217,29 @@ footer {
 #main-about {
   text-align: center;
   margin-top: 60px;
+}
 
-  #bio {
+#bio {
 
-    div {
-      vertical-align: top;
+  div {
+    vertical-align: top;
 
-      @media (min-width: 1024px) {
-        display: inline-block;
-      }
-    }
-
-    #img-bio {
-
-      img {
-        width: 75%;
-
-        @media (min-width: 480px) {
-           width: 350px;
-        }
-      }
+    @media (min-width: 1024px) {
+      display: inline-block;
     }
   }
-} /* end #main-about */
+}
+
+#img-bio {
+
+  img {
+    width: 75%;
+
+    @media (min-width: 480px) {
+       width: 350px;
+    }
+  }
+}
 
 #text-bio {
   text-align: justify;
@@ -268,9 +264,20 @@ footer {
 #main-work {
   text-align: center;
 
-  div {
+  .workColumn {
 
     @media (min-width: 1024px) {
+      display: inline-block;
+    }
+  }
+
+  .work {
+
+    @media (min-width: 480px) {
+      margin-bottom: 20px;
+    }
+
+    a {
       display: inline-block;
     }
   }
@@ -280,6 +287,30 @@ footer {
 
     @media (min-width: 480px) {
       width: auto;
+    }
+  }
+}
+
+#workCol1 {
+
+  #col1Samp2 {
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#workCol2 {
+
+  @media (min-width: 1024px) {
+    margin-left: 20px;
+  }
+
+  #col2Samp2 {
+
+    @media (min-width: 480px) {
+      margin-bottom: 0;
     }
   }
 }
@@ -308,13 +339,15 @@ footer {
       display: inline-block;
     }
   }
+}
 
-  #email,
-  #facebook,
-  #linkedin {
+#email,
+#facebook,
+#linkedin {
 
-    @media (min-width: 768px) {
-      padding-right: 30px;
-    }
+  @media (min-width: 768px) {
+    padding-right: 30px;
   }
 }
+
+/* ---------- PROJECT: ANIMAL CRACKERS  ---------- */
