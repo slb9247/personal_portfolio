@@ -333,8 +333,22 @@ footer {
   }
 }
 
-/* ---------- PROJECT: ANIMAL CRACKERS ---------- */
-#info-proj_ac {
+/* ---------- PROJECTS GENERAL ---------- */
+.text-proj {
+  text-align: justify;
+  box-sizing: border-box;
+  background-color: #ad9b97;
+  width: 75%;
+  min-height: 300px;
+  padding: 20px;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    width: 500px;
+  }
+}
+
+.info-proj {
 
   img {
     width: 75%;
@@ -343,21 +357,10 @@ footer {
       width: 500px;
     }
   }
-
-  .projInfo {
-    text-align: justify;
-    box-sizing: border-box;
-    background-color: #ad9b97;
-    width: 75%;
-    min-height: 300px;
-    padding: 20px;
-    margin-top: 20px;
-
-    @media (min-width: 768px) {
-      width: 500px;
-    }
-  }
 }
+
+/* ---------- PROJECT: ANIMAL CRACKERS ---------- */
+
 
 #img-proj_ac2,
 #img-proj_ac3 {
