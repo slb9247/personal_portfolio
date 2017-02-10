@@ -16,12 +16,19 @@
   list-style: none; // lists
 }
 
+html {
+  height: 100%; /* removes scroll "bounce" effect */
+  overflow: hidden; /* removes scroll "bounce" effect */
+}
+
 body {
   background-color: #663333;
+  height: 100%; /* removes scroll "bounce" effect */
+  overflow: auto; /* removes scroll "bounce" effect */
 }
 
 img {
-  display: block; /* removes default gap under image */
+  display: block; /* removes default gap under images */
 }
 
 /* ---------- LINKS ---------- */
@@ -165,14 +172,12 @@ nav {
   }
 }
 
-.main-page::before { /* fixed nav offset */
-  display: block;
-  content: '';
-  height: 100px;
-  margin-top: -100px;
+.main-page {
+  text-align: center;
+  margin: 60px 0;
 
-  @media (min-width: 480px) {
-    display: none;
+  @media(min-width: 480px) {
+    margin: 0;
   }
 }
 
@@ -194,7 +199,7 @@ footer {
 
 /* ---------- HOME PAGE ---------- */
 #main-home {
-  text-align: center;
+  margin: 0;
 
   div {
 
@@ -213,11 +218,6 @@ footer {
 }
 
 /* ---------- ABOUT PAGE ---------- */
-#main-about {
-  text-align: center;
-  margin-top: 60px;
-}
-
 #bio {
 
   div {
@@ -261,7 +261,7 @@ footer {
 
 /* ---------- WORK PAGE ---------- */
 #main-work {
-  text-align: center;
+  margin: 0;
 
   .workColumn {
 
@@ -280,7 +280,7 @@ footer {
     a {
 
       @media (min-width: 480px) {
-        display: inline-block;
+        display: inline-block; // keeps link ONLY on image
       }
     }
 
@@ -307,11 +307,11 @@ footer {
       width: auto;
     }
   }
-}
+} /* end #main-work */
 
 #workCol1 {
 
-  #col1Samp2 {
+  #proj_appleb {
 
     @media (min-width: 1024px) {
       margin-bottom: 0;
@@ -325,7 +325,7 @@ footer {
     margin-left: 20px;
   }
 
-  #col2Samp2 {
+  #proj_form {
 
     @media (min-width: 480px) {
       margin-bottom: 0;
@@ -333,10 +333,49 @@ footer {
   }
 }
 
+/* ---------- PROJECT: ANIMAL CRACKERS ---------- */
+#info-proj_ac {
+
+  img {
+    width: 75%;
+
+    @media (min-width: 768px) {
+      width: 500px;
+    }
+  }
+
+  .projInfo {
+    text-align: justify;
+    box-sizing: border-box;
+    background-color: #ad9b97;
+    width: 75%;
+    min-height: 300px;
+    padding: 20px;
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+      width: 500px;
+    }
+  }
+}
+
+#img-proj_ac2,
+#img-proj_ac3 {
+  margin-top: 20px;
+}
+
+/* ---------- PROJECT: APPLEBEES ---------- */
+
+
+/* ---------- PROJECT: JAZZ POSTER ---------- */
+
+
+/* ---------- PROJECT: SIGN UP FORM ---------- */
+
+
+
 /* ---------- CONTACT PAGE ---------- */
 #main-contact {
-  text-align: center;
-  margin-top: 60px;
 
   p {
     text-align: center;
@@ -354,7 +393,7 @@ footer {
     }
 
     a {
-      display: inline-block;
+      display: inline-block; // keeps link ONLY on image
     }
   }
 }
@@ -367,5 +406,3 @@ footer {
     padding-right: 30px;
   }
 }
-
-/* ---------- PROJECT: ANIMAL CRACKERS  ---------- */
