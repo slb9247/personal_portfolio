@@ -76,7 +76,7 @@ nav {
       transform: translateY(-50%);
       width: 85%;
 
-      #logo-mobile {
+      #logo_mobile {
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -111,14 +111,14 @@ nav {
       display: inline-block
     }
 
-    #logo_small {
+    #logo_tab {
 
       @media (min-width: 600px) {
         display: none;
       }
     }
 
-    #logo_big {
+    #logo_desk {
       display: none;
 
       @media (min-width: 600px) {

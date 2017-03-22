@@ -654,7 +654,7 @@ nav {
       top: 50%;
       transform: translateY(-50%);
       width: 85%; }
-      nav #fixedNav #navWrap #logo-mobile {
+      nav #fixedNav #navWrap #logo_mobile {
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -678,12 +678,12 @@ nav {
     nav #nav-main p {
       display: inline-block; }
     @media (min-width: 600px) {
-      nav #nav-main #logo_small {
+      nav #nav-main #logo_tab {
         display: none; } }
-    nav #nav-main #logo_big {
+    nav #nav-main #logo_desk {
       display: none; }
       @media (min-width: 600px) {
-        nav #nav-main #logo_big {
+        nav #nav-main #logo_desk {
           display: inline-block; } }
   nav #menu-overlay {
     display: none;
