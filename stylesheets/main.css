@@ -749,7 +749,18 @@ footer {
     width: 100%; }
     @media (min-width: 480px) {
       #main-home img {
-        width: auto; } }
+        width: 320px; } }
+    @media (min-width: 1024px) {
+      #main-home img {
+        width: 270px; } }
+
+@media (min-width: 480px) {
+  .space {
+    margin-bottom: 20px; } }
+@media (min-width: 1024px) {
+  .space {
+    margin-bottom: 0;
+    margin-right: 20px; } }
 
 /* ---------- ABOUT PAGE ---------- */
 #bio div {
