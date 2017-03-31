@@ -1,3 +1,9 @@
+/*@media screen and (min-width:320px){} // mobile portrait*/
+/*@media screen and (min-width:480px){} // mobile landscape*/
+/*@media screen and (min-width:768px){} // ipad portrait*/
+/*@media screen and (min-width:1024px){} // browser, ipad landscape*/
+/*@media screen and (min-width:1200px){} // browser*/
+/*@media screen and (min-width:1600px){} // browser*/
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -598,7 +604,9 @@
   margin: 0 auto;
   padding: 0;
   text-decoration: none;
-  list-style: none; }
+  /* links*/
+  list-style: none;
+  /* lists*/ }
 
 html {
   height: 100%;
@@ -652,17 +660,20 @@ nav {
     nav #fixedNav #navWrap {
       position: relative;
       top: 50%;
+      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       width: 85%; }
       nav #fixedNav #navWrap #logo_mobile {
         display: inline-block;
         position: absolute;
         top: 50%;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         left: 0; }
       nav #fixedNav #navWrap .hamburger {
         position: absolute;
         top: 50%;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         right: 0;
         padding: 0; }
@@ -701,6 +712,7 @@ nav {
     nav #menu-overlay #menu-overlayContent {
       position: relative;
       top: 50%;
+      -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
       nav #menu-overlay #menu-overlayContent li {
         padding: 15px; }
@@ -709,7 +721,7 @@ nav {
 
 /* end nav */
 .current-link {
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #7c3333; }
 
 /* ---------- PAGES GENERAL ---------- */
 .container {
@@ -737,6 +749,7 @@ footer {
   footer p {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
 
 /* ---------- HOME PAGE ---------- */
@@ -804,7 +817,8 @@ footer {
         margin-bottom: 20px; } }
     @media (min-width: 480px) {
       #main-work .work a {
-        display: inline-block; } }
+        display: inline-block;
+        /* keeps link ONLY on image */ } }
     @media (min-width: 480px) {
       #main-work .work .mobile_work {
         display: none; } }
@@ -837,7 +851,7 @@ footer {
   box-sizing: border-box;
   background-color: #ad9b97;
   width: 75%;
-  min-height: 300px;
+  min-height: 100px;
   padding: 20px;
   margin-top: 20px; }
   @media (min-width: 768px) {
@@ -856,7 +870,12 @@ footer {
 /* ---------- CONTACT PAGE ---------- */
 #main-contact p {
   text-align: center;
-  font-size: 3.5em; }
+  font-size: 3.5em;
+  color: #fff;
+  font-weight: 300; }
+  @media (min-width: 480px) {
+    #main-contact p {
+      color: #000; } }
 
 #social .icon {
   padding-top: 30px; }
@@ -864,7 +883,8 @@ footer {
     #social .icon {
       display: inline-block; } }
   #social .icon a {
-    display: inline-block; }
+    display: inline-block;
+    /* keeps link ONLY on image */ }
 
 @media (min-width: 768px) {
   #email,

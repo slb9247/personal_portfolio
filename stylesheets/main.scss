@@ -1,9 +1,9 @@
-//@media screen and (min-width:320px){} // mobile portrait
-//@media screen and (min-width:480px){} // mobile landscape
-//@media screen and (min-width:768px){} // ipad portrait
-//@media screen and (min-width:1024px){} // browser, ipad landscape
-//@media screen and (min-width:1200px){} // browser
-//@media screen and (min-width:1600px){} // browser
+/*@media screen and (min-width:320px){} // mobile portrait*/
+/*@media screen and (min-width:480px){} // mobile landscape*/
+/*@media screen and (min-width:768px){} // ipad portrait*/
+/*@media screen and (min-width:1024px){} // browser, ipad landscape*/
+/*@media screen and (min-width:1200px){} // browser*/
+/*@media screen and (min-width:1600px){} // browser*/
 
 
 @import 'hamburgers/hamburgers';
@@ -12,8 +12,8 @@
 * {
   margin: 0 auto;
   padding: 0;
-  text-decoration: none; // links
-  list-style: none; // lists
+  text-decoration: none; /* links*/
+  list-style: none; /* lists*/
 }
 
 html {
@@ -58,7 +58,7 @@ nav {
   }
 
   #fixedNav {
-    background-color: #efefef; //CHANGE
+    background-color: #efefef;
     width: 100%;
     height: 100px;
     position: fixed;
@@ -73,21 +73,24 @@ nav {
     #navWrap {
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       width: 85%;
 
       #logo_mobile {
         display: inline-block;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         left: 0;
       }
 
       .hamburger {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         right: 0;
         padding: 0;
       }
@@ -134,7 +137,7 @@ nav {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #efefef; //CHANGE
+    background-color: #efefef;
     z-index: 900;
 
     @media (min-width: 480px) {
@@ -144,7 +147,8 @@ nav {
     #menu-overlayContent {
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
 
       li {
         padding: 15px;
@@ -158,7 +162,7 @@ nav {
 } /* end nav */
 
 .current-link {
-  border-bottom: 1px solid #000000; //CHANGE COLOR
+  border-bottom: 1px solid #7c3333;
 }
 
 /* ---------- PAGES GENERAL ---------- */
@@ -166,7 +170,7 @@ nav {
   min-height: 100px;
 
   @media (min-width: 480px) {
-    background-color: #efefef; //CHANGE
+    background-color: #efefef;
     width: 85%;
     padding-bottom: 60px;
   }
@@ -193,7 +197,8 @@ footer {
   p {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -296,7 +301,7 @@ footer {
     a {
 
       @media (min-width: 480px) {
-        display: inline-block; // keeps link ONLY on image
+        display: inline-block; /* keeps link ONLY on image */
       }
     }
 
@@ -355,7 +360,7 @@ footer {
   box-sizing: border-box;
   background-color: #ad9b97;
   width: 75%;
-  min-height: 300px;
+  min-height: 100px;
   padding: 20px;
   margin-top: 20px;
 
@@ -385,6 +390,12 @@ footer {
   p {
     text-align: center;
     font-size: 3.5em;
+    color: #fff;
+    font-weight: 300;
+
+    @media (min-width: 480px) {
+      color: #000;
+    }
   }
 }
 
@@ -398,7 +409,7 @@ footer {
     }
 
     a {
-      display: inline-block; // keeps link ONLY on image
+      display: inline-block; /* keeps link ONLY on image */
     }
   }
 }
